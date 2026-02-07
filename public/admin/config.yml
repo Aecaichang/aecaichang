@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME
+  branch: main
+  # For Vercel OAuth proxy (recommended):
+  # base_url: https://YOUR-VERCEL-DOMAIN.vercel.app
+  # auth_endpoint: api/auth
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Image Alt", name: "heroImageAlt", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

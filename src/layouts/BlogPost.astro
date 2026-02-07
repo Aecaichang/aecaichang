@@ -9,6 +9,7 @@ import Header from '../components/Header.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { heroImageAlt, gallery = [] } = Astro.props;
 ---
 
 <html lang="en">
@@ -52,6 +53,31 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			.gallery {
+				margin-top: 2.5rem;
+			}
+			.gallery h2 {
+				font-size: 1.25rem;
+				margin-bottom: 0.75rem;
+			}
+			.gallery-grid {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 0.8rem;
+			}
+			.gallery-item {
+				margin: 0;
+			}
+			.gallery-item figcaption {
+				font-size: 0.9rem;
+				color: rgb(var(--gray));
+				margin-top: 0.4rem;
+			}
+			@media (max-width: 720px) {
+				.gallery-grid {
+					grid-template-columns: 1fr;
+				}
+			}
 		</style>
 	</head>
 
@@ -60,7 +86,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || title} />}
 				</div>
 				<div class="prose">
 					<div class="title">
@@ -78,6 +104,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<hr />
 					</div>
 					<slot />
+					{
+						gallery.length > 0 && (
+							<section class="gallery">
+								<h2>ภาพเพิ่มเติม</h2>
+								<div class="gallery-grid">
+									{gallery.map((item) => (
+										<figure class="gallery-item">
+											<Image width={880} height={560} src={item.image} alt={item.alt} loading="lazy" />
+											{item.caption && <figcaption>{item.caption}</figcaption>}
+										</figure>
+									))}
+								</div>
+							</section>
+						)
+					}
 				</div>
 			</article>
 		</main>
