@@ -62,11 +62,10 @@ const fullUrl = url.href;
 	const copyBtn = document.getElementById('copy-link-btn');
 	const toast = document.getElementById('copy-toast');
 
+	// Copy Link Logic
 	copyBtn?.addEventListener('click', async () => {
 		try {
 			await navigator.clipboard.writeText(window.location.href);
-			
-			// Show toast
 			if (toast) {
 				toast.classList.add('show');
 				setTimeout(() => {
@@ -76,6 +75,24 @@ const fullUrl = url.href;
 		} catch (err) {
 			console.error('Failed to copy: ', err);
 		}
+	});
+
+	// Smart Share Popup Logic
+	document.querySelectorAll('.btn-share.facebook, .btn-share.twitter, .btn-share.line').forEach(btn => {
+		btn.addEventListener('click', (e) => {
+			e.preventDefault();
+			const url = (e.currentTarget as HTMLAnchorElement).href;
+			const width = 600;
+			const height = 400;
+			const left = (window.innerWidth - width) / 2;
+			const top = (window.innerHeight - height) / 2;
+			
+			window.open(
+				url,
+				'share-dialog',
+				`width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+			);
+		});
 	});
 </script>
 
