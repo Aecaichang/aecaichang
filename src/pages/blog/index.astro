@@ -11,7 +11,7 @@ const posts = (await getCollection('blog'))
     title: post.data.title,
     description: post.data.description,
     date: post.data.pubDate,
-    imageUrl: post.data.heroImage?.src,
+    imageUrl: typeof post.data.heroImage === 'string' ? post.data.heroImage : post.data.heroImage?.src,
     imageAlt: post.data.heroImageAlt || post.data.title
   }))
   .sort((a, b) => b.date.valueOf() - a.date.valueOf());
