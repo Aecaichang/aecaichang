@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/aecaichang
+  repo: Aecaichang/aecaichang
   branch: main
-  base_url: https://aecaichang.com
+  base_url: https://aecaichang.vercel.app
   auth_endpoint: api/auth
 
 media_folder: "public/images/blog"
