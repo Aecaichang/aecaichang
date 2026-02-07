@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://aecaichang.com',
+  site: 'https://aecaichang.vercel.app',
   integrations: [mdx(), sitemap()]
 });
