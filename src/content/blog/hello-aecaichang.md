@@ -4,7 +4,7 @@ pubDate: 2026-02-07
 description: บันทึกประสบการณ์จากสาย Tester สู่การเป็นครูหนึ่งปีเต็ม
   พร้อมบทเรียนทั้งงานสอนและการดูแลใจคน
 author: Ae CaiChang
-heroImage: @assets/blog/1_fxy43ttd9bgliv3qzn50xq.jpg
+heroImage: "@assets/blog/1_fxy43ttd9bgliv3qzn50xq.jpg"
 heroImageAlt: โต๊ะทำงานกับสมุดบันทึก
 gallery:
   - image: ../../assets/blog-placeholder-2.jpg
