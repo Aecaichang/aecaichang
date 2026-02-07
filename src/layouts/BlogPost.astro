@@ -86,7 +86,15 @@ const { heroImageAlt, gallery = [] } = Astro.props;
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || title} />}
+					{
+						heroImage && (
+							typeof heroImage === 'string' ? (
+								<img width={1020} height={510} src={heroImage} alt={heroImageAlt || title} />
+							) : (
+								<Image width={1020} height={510} src={heroImage} alt={heroImageAlt || title} />
+							)
+						)
+					}
 				</div>
 				<div class="prose">
 					<div class="title">
@@ -111,7 +119,13 @@ const { heroImageAlt, gallery = [] } = Astro.props;
 								<div class="gallery-grid">
 									{gallery.map((item) => (
 										<figure class="gallery-item">
-											<Image width={880} height={560} src={item.image} alt={item.alt} loading="lazy" />
+											{
+												typeof item.image === 'string' ? (
+													<img width={880} height={560} src={item.image} alt={item.alt} loading="lazy" />
+												) : (
+													<Image width={880} height={560} src={item.image} alt={item.alt} loading="lazy" />
+												)
+											}
 											{item.caption && <figcaption>{item.caption}</figcaption>}
 										</figure>
 									))}
