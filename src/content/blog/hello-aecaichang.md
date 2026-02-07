@@ -1,11 +1,11 @@
 ---
 title: มาเล่าให้ฟัง จาก Tester มาเป็นสิ่งที่ใครก็เรียกว่า Teacher
-pubDate: 2026-02-07
+pubDate: 2021-08-07
 description: บันทึกประสบการณ์จากสาย Tester สู่การเป็นครูหนึ่งปีเต็ม
   พร้อมบทเรียนทั้งงานสอนและการดูแลใจคน
 author: Ae CaiChang
-heroImage: public/images/blog/1_fxy43ttd9bgliv3qzn50xq.jpg
-heroImageAlt: โต๊ะทำงานกับสมุดบันทึก
+heroImage: ../../assets/blog/1_fxy43ttd9bgliv3qzn50xq.jpg
+heroImageAlt: รูปภาพ ถ่ายรูปหมู่กับเพื่อนๆพี่ๆใน Nextzy
 gallery:
   - image: ../../assets/blog-placeholder-2.jpg
     alt: คีย์บอร์ดบนโต๊ะไม้
