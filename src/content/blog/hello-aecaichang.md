@@ -1,18 +1,23 @@
 ---
-title: "มาเล่าให้ฟัง จาก Tester มาเป็นสิ่งที่ใครก็เรียกว่า Teacher"
+title: มาเล่าให้ฟัง จาก Tester มาเป็นสิ่งที่ใครก็เรียกว่า Teacher
 pubDate: 2026-02-07
-description: "บันทึกประสบการณ์จากสาย Tester สู่การเป็นครูหนึ่งปีเต็ม พร้อมบทเรียนทั้งงานสอนและการดูแลใจคน"
-author: "Ae CaiChang"
-heroImage: "../../assets/blog-placeholder-1.jpg"
-heroImageAlt: "โต๊ะทำงานกับสมุดบันทึก"
-tags: ["teacher", "tester", "career", "personal"]
+description: บันทึกประสบการณ์จากสาย Tester สู่การเป็นครูหนึ่งปีเต็ม
+  พร้อมบทเรียนทั้งงานสอนและการดูแลใจคน
+author: Ae CaiChang
+heroImage: /images/blog/1_fxy43ttd9bgliv3qzn50xq.jpg
+heroImageAlt: โต๊ะทำงานกับสมุดบันทึก
 gallery:
-  - image: "../../assets/blog-placeholder-2.jpg"
-    alt: "คีย์บอร์ดบนโต๊ะไม้"
-    caption: "ช่วงเวลาที่เริ่มเขียนและทบทวนประสบการณ์"
-  - image: "../../assets/blog-placeholder-3.jpg"
-    alt: "หน้าจอทำงานพร้อมโน้ต"
-    caption: "บันทึกสิ่งที่อยากส่งต่อให้คนอ่าน"
+  - image: ../../assets/blog-placeholder-2.jpg
+    alt: คีย์บอร์ดบนโต๊ะไม้
+    caption: ช่วงเวลาที่เริ่มเขียนและทบทวนประสบการณ์
+  - image: ../../assets/blog-placeholder-3.jpg
+    alt: หน้าจอทำงานพร้อมโน้ต
+    caption: บันทึกสิ่งที่อยากส่งต่อให้คนอ่าน
+tags:
+  - teacher
+  - tester
+  - career
+  - personal
 ---
 
 สวัสดีผู้หลงเข้ามาทุกท่านครับ
