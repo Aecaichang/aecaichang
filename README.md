@@ -64,3 +64,20 @@ Deploy ได้ทั้ง Vercel และ Cloudflare Pages
 
 - Build command: `npm run build`
 - Output directory: `dist`
+
+## Decap CMS (Vercel + GitHub OAuth)
+
+ไฟล์ที่เกี่ยวข้อง:
+- `public/admin/index.html`
+- `public/admin/config.yml`
+- `api/auth.js`
+- `api/callback.js`
+
+สิ่งที่ต้องตั้งค่า:
+1. แก้ `repo` ใน `public/admin/config.yml` ให้เป็น repo จริงของคุณ
+2. สร้าง GitHub OAuth App แล้วตั้ง callback URL เป็น:
+   - `https://aecaichang.com/api/callback`
+3. ตั้ง Environment Variables บน Vercel:
+   - `GITHUB_OAUTH_CLIENT_ID`
+   - `GITHUB_OAUTH_CLIENT_SECRET`
+4. เปิดหน้า `/admin` เพื่อใช้งาน Decap CMS
