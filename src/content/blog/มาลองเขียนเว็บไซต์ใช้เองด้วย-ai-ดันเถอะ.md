@@ -189,5 +189,6 @@ description: >-
 
 
   คุณอยากให้ผมช่วยลองเขียน "Prompt ตัวอย่าง" ที่จะใช้ในหัวข้อ Workshop เพื่อเอาไปใส่ใน Blog เพิ่มเติมไหมครับ?
+heroImage: "@assets/blog/gemini_generated_image_qvocwiqvocwiqvoc-1-.png"
 ---
 Test
